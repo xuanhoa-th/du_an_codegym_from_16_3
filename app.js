@@ -1,4 +1,3 @@
-
 const canvas = document.querySelector(".canvas");
 const  ctx = canvas.getContext("2d");
 const scale = 10;
@@ -18,6 +17,9 @@ let up = new Audio();
 let right = new Audio();
 let left = new Audio();
 let down = new Audio();
+let speed = 300;
+let lever = [];
+let le = 0;
 
 dead.src = "audio/dead.mp3";
 eat.src = "audio/eat.mp3";
@@ -39,8 +41,29 @@ function setup() {
         if (snake.eat(food)){
             food.pickLocation();
             document.getElementById("point").innerHTML = snake.total;
+            // if(snake.total === 10 ){
+            //     document.getElementById("diem").innerHTML = "1";
+            // }
+
+            lever.push(snake.total);
+            for(let i = 0 ; i<=lever.length - 1; i++){
+                if(i == 10){
+                    document.getElementById("diem").innerHTML = 1;
+                } else if (i == 20) {
+                    document.getElementById("diem").innerHTML = 2;
+                }
+                else if (i == 40) {
+                    document.getElementById("diem").innerHTML = 3;
+                } else if (i == 60) {
+                    document.getElementById("diem").innerHTML = 4;
+                } else if (i == 80) {
+                    document.getElementById("diem").innerHTML = 5;
+                }
+            }
         }
-    },200);
+        
+    },300);
+
 };
 setup();
 window.addEventListener('keydown',((evt) => {
@@ -107,6 +130,7 @@ function food() {
             clearInterval(setup());
         }
         collision();
+
     };
 
     this.changeDirection = function (direction) {
@@ -177,3 +201,8 @@ function collision() {
         clearInterval(setup());
     }
 }
+// function lever(){
+//     if(snake.total === 2 ){
+//         console.log('okok');
+//     }
+// }

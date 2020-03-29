@@ -1,14 +1,14 @@
 canvas {
-	margin-left: 696px;
-    position: absolute;
-    margin-top: 270px;
+	margin-left: 666px;
+	position: absolute;
+	margin-top: 157px;
 	}
 	.menu{
 
 	}
 	.result {
 	
-margin-top: 282px;
+margin-top: 164px;
 	
 position: absolute;
 	
@@ -16,19 +16,34 @@ color: red;
 	
 font-family: sans-serif;
 	
-margin-left: 1012px;
+margin-left: 978px;
 	}
 	.score {
 	
-margin-top: 310px;
+margin-top: 190px;
 	
 position: absolute;
 	
 color: red;
 	
-margin-left: 1027px;
+margin-left: 998px;
 }
 img.img {
-    width: 1510px;
-    height: 669px;
+    width: 100%;
+    height: 100%;
+}
+p#lev {
+    position: absolute;
+    color: wheat;
+    margin-left: 985px;
+    margin-top: 221px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.levDiem {
+    position: absolute;
+    color: wheat;
+    margin-left: 999px;
+    margin-top: 230px;
 }
